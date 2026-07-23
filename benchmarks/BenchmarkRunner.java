@@ -13,8 +13,11 @@ import java.util.Random;
  * goals) which handles JIT warmup and measurement noise properly --
  * numbers here should be read as directional, not authoritative.
  *
- * Run with: java -cp target/classes benchmarks.BenchmarkRunner
- * (after `mvn compile`)
+ * Run with (after `mvn compile`):
+ *   javac -cp target/classes -d target/classes benchmarks/BenchmarkRunner.java
+ *   java -cp target/classes BenchmarkRunner
+ * (no package declaration -- this class lives in the default package, matching
+ * the commands above; see README.md's Benchmarks section.)
  */
 public class BenchmarkRunner {
 
